@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vigenere Cipher</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">Vigenere Cipher</h2>
+
+        <!-- Form mã hóa -->
+        <section class="mt-4">
+            <h4>ENCRYPTION</h4>
+            <form method="POST" action="/vigenere/encrypt">
+                <div class="mb-3">
+                    <label for="inputPlainText" class="form-label">Plain Text:</label>
+                    <input type="text" class="form-control" name="inputPlainText" required>
+                </div>
+                <div class="mb-3">
+                    <label for="inputKey" class="form-label">Key:</label>
+                    <input type="text" class="form-control" name="inputKey" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Encrypt</button>
+            </form>
+        </section>
+
+        <!-- Form giải mã -->
+        <section class="mt-4">
+            <h4>DECRYPTION</h4>
+            <form method="POST" action="/vigenere/decrypt">
+                <div class="mb-3">
+                    <label for="inputCipherText" class="form-label">Cipher Text:</label>
+                    <input type="text" class="form-control" name="inputCipherText" required>
+                </div>
+                <div class="mb-3">
+                    <label for="inputKeyCipher" class="form-label">Key:</label>
+                    <input type="text" class="form-control" name="inputKeyCipher" required>
+                </div>
+                <button type="submit" class="btn btn-success">Decrypt</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
